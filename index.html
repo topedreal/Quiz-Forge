@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuizForge</title>
+    <!-- Load Bootstrap first so custom rules can override if needed -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Minimal custom overrides built on top of Bootstrap -->
+    <link rel="stylesheet" href="./style/stytle.css" />
+  </head>
+  <body>
+    <!-- Simple Bootstrap navbar header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient px-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center fw-bold fs-3" href="#">
+          <span class="text-primary">QUI</span
+          ><i class="fa fa-lightbulb ms-1 text-warning"></i
+          ><span class="text-light">Z</span>
+          <small class="text-white ms-2 fst-italic">Forge</small>
+        </a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-lg-7">
+          <div class="card shadow-sm quiz-container">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <h2 id="question-text" class="card-title mb-0">
+                  Question text
+                </h2>
+                <div id="question-counter" class="text-white small"></div>
+              </div>
+
+              <form id="quiz-form">
+                <div id="options-container" class="mb-3"></div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="controls d-flex gap-3">
+                    <button
+                      type="button"
+                      id="prev-btn"
+                      class="btn btn-outline-secondary btn-sm"
+                      disabled
+                    >
+                      Previous
+                    </button>
+                    <button
+                      type="button"
+                      id="next-btn"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Next
+                    </button>
+                    <button
+                      type="button"
+                      id="restart-btn"
+                      class="btn btn-outline-danger btn-sm"
+                      style="display: none"
+                    >
+                      Restart
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div id="result" class="mt-4" style="display: none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
